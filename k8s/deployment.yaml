@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: goproxy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: goproxy
+  template:
+    metadata:
+      labels:
+        app: goproxy
+    spec:
+      containers:
+      - image: okteto.dev/goproxy:latest
+        name: goproxy
+        ports:
+        - containerPort: 80
