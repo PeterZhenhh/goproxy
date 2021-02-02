@@ -16,4 +16,4 @@ spec:
       - image: okteto.dev/goproxy:latest
         name: goproxy
         ports:
-        - containerPort: 80
+        - containerPort: 8080
